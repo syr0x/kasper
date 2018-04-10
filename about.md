@@ -3,4 +3,4 @@ layout: page
 title: About me 
 ---
 
-This is a static page. It could be an 'about page' if you'd like.
+~| malware research | ɹǝǝuıƃuǝ ǝsɹǝʌǝɹ | wannabe hacker... | unpacks malware with as much joy as a kid unpacking candies | practice makes perfect, there's no talent/luck here. |~ 
