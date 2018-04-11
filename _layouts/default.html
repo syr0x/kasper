@@ -18,11 +18,10 @@
 
 </head>
 <body class="{% if page.post_class %}{{page.post_class}}{% else %}home-template{% endif %}">
-
+    {{ content }}
     <center>
         <script src="https://www.hackthebox.eu/badge/5571"></script>
     </center>
-    {{ content }}
     <footer class="site-footer clearfix">
       <section class="copyright">
         <a href="{{ site.baseurl }}">{{ site.name }}</a> &copy; 
