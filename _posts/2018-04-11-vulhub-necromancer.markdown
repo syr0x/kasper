@@ -6,6 +6,7 @@ categories: CTF VulnHub WriteUp
 ---
 
 ->
+
 In this post, I will walk you through my methodology for solving a Vulnhub VM known as Necromancer.
 The machine is intended to teach beginners about the basics of CTF challenges.
 
