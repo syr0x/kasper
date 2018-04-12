@@ -1,6 +1,6 @@
 name: ZeroDay Security
 description: security stuffs written by an security researcher and CTF addict
-meta_description: "Your New Jekyll Site, Blogging about stuffs"
+meta_description: "Blogging about security and nice stuffs"
 
 markdown: kramdown
 highlighter: rouge
