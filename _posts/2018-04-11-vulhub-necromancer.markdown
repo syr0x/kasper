@@ -4,7 +4,7 @@ title:  "VulnHub: Necromancer! by @Xerubus"
 date:   2018-04-10 16:46:00
 categories: CTF VulnHub WriteUp
 ---
-{% asciinema_play 8D21v5FFaTMEW76bvpWl2qBym %}
+
 In this post, I will walk you through my methodology for solving a Vulnhub VM known as Necromancer.
 The machine is intended to teach beginners about the basics of CTF challenges.
 There are 11 flags to collect on your way to solving the challenge
