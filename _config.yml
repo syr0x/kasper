@@ -10,8 +10,8 @@ baseurl: http://zerodaysec.net/
 domain_name: 'http://zerodaysec.net'
 google_analytics: 'UA-117211350-1'
 gems:
-  - jekyll-paginate
   - jekyll-asciinema
+  - jekyll-paginate
 
 # Details for the RSS feed generator
 url:            'zerodaysec.net'
