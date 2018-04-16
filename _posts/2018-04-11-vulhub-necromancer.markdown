@@ -13,3 +13,4 @@ The end goal is simple… destroy The Necromancer!
 ![necromancer ascii]({{ "/assets/images/necromancer-00.png"}})
 VM is designed to DHCP auto assign so we typically track the VM's IP with netdiscover use.
 <script src="https://asciinema.org/a/8D21v5FFaTMEW76bvpWl2qBym.js" id="asciicast-8D21v5FFaTMEW76bvpWl2qBym" async></script>
+
