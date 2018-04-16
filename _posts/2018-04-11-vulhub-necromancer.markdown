@@ -12,5 +12,4 @@ There are 11 flags to collect on your way to solving the challenge
 The end goal is simple… destroy The Necromancer!
 ![necromancer ascii]({{ "/assets/images/necromancer-00.png"}})
 VM is designed to DHCP auto assign so we typically track the VM's IP with netdiscover use.
-
-<a href="https://asciinema.org/a/48201" target="_blank"><img src="https://asciinema.org/a/8D21v5FFaTMEW76bvpWl2qBym.png"/></a>
+<script src="https://asciinema.org/a/8D21v5FFaTMEW76bvpWl2qBym.js" id="asciicast-8D21v5FFaTMEW76bvpWl2qBym" async></script>
