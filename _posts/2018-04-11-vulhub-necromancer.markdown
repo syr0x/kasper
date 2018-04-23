@@ -33,6 +33,17 @@ Looking at the log, we can see a connection being made from the Necromancer’s 
 This can be another port on our target. Lets use netcat once again to see the data being transfered.
 <netcat listen>
 
+We get a text dump in return. It has capital characters, small characters and numbers as well. This has to be a base64 encoded text.
+So i decode it using the base64 -d command in terminal to make the things more easily to read.
+<base64 decode>
+
+First Flag captured! The flag1 text seems to be a md5 hash so we decrypt it at www.hashkiller.co.uk. It decrypts to “opensesame”.
+Based from the hint given on the message, we need to “chant” the string of flag1 to UDP 666 via netcat.
+<decrypt msg>
+
+
+
+
 
 
 
