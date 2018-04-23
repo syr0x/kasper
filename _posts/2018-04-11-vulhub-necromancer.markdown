@@ -12,5 +12,11 @@ There are 11 flags to collect on your way to solving the challenge
 The end goal is simple… destroy The Necromancer!
 ![necromancer ascii]({{ "/assets/images/necromancer-00.png"}})
 VM is designed to DHCP auto assign so we typically track the VM's IP with netdiscover use.
-<script src="https://asciinema.org/a/8D21v5FFaTMEW76bvpWl2qBym.js" id="asciicast-8D21v5FFaTMEW76bvpWl2qBym" async></script>
+<img1 netdiscover>
+
+First off, let’s perform a  TCP SYN scan via nmap to identify open ports on the target machine. I usually perform a scan for ALL ports during CTF challenges to check for services that are not utilizing the TOP 1000 ports.
+<img2 nmap tcp>
+
+
+
 
