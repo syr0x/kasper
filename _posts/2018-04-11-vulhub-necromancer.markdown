@@ -31,7 +31,7 @@ I decide use the wireshark to sniff the traffic to see what’s happening under 
 
 Looking at the log, we can see a connection being made from the Necromancer’s IP address to our IP address. The connection is destined to port 4444.
 This can be another port on our target. Lets use netcat once again to see the data being transfered.
-![necromancer ascii]({{ "/assets/images/necromancer-07.png"}})
+![necromancer ascii]({{ "/assets/images/necromancer-06.png"}})
 
 We get a text dump in return. It has capital characters, small characters and numbers as well. This has to be a base64 encoded text.
 So i decode it using the base64 -d command in terminal to make the things more easily to read.
