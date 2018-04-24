@@ -26,7 +26,7 @@ Port 666 is open! Let' try a Netcat to see what is running in that port.
 ![necromancer ascii]({{ "/assets/images/necromancer-04.png"}})
 
 No matter how many times we hit enter, we get the same reply- “You gasp for air! Time is running out!”. Is there something happening that we can’t see?
-I decide use the wireshark to sniff the traffic to see what’s happening under the hood.("tcpdump host <ip>" is another option here)
+I decide use the wireshark to sniff the traffic to see what’s happening under the hood.("tcpdump host \<ip\>" is another option here)
 ![necromancer ascii]({{ "/assets/images/necromancer-05.png"}})
 
 Looking at the log, we can see a connection being made from the Necromancer’s IP address to our IP address. The connection is destined to port 4444.
