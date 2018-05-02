@@ -30,19 +30,21 @@ This can be another port on our target. Lets use netcat once again to see the da
 We get a text dump in return. It has capital characters, small characters and numbers as well. This has to be a base64 encoded text.
 So i decode it using the base64 -d command in terminal to make the things more readable.
 ![necromancer ascii]({{ "/assets/images/necromancer-07.png"}})
-First Flag captured! The flag1 text seems to be a md5 hash so we decrypt it at www.hashkiller.co.uk. It decrypts to “opensesame”.
-Based from the hint given on the message, we need to “chant” the string of flag1 to UDP 666 via netcat.
 ![necromancer ascii]({{ "/assets/images/necromancer-08.png"}})
-Based on the hint from the previous message, port 80 may have opened up. Let’s fire up the victim machine’s IP to our browser on port 80.
+<b>First Flag captured!</b> The flag1 text seems to be a md5 hash so we decrypt it at www.hashkiller.co.uk. It decrypts to “opensesame”.
+Based from the hint given on the message, we need to “chant” the string of flag1 to UDP 666 via netcat.
+![webimage and text]({{ "/assets/images/necromancer-11.png"}})
+<b>Second Flag Captured!</b>
+Another hint. Numeral 80 reminds us of port 80 used for http. Let’s fire up the victim machine’s IP to our browser on port 80.
 ![webimage and text]({{ "/assets/images/necromancer-09.png"}})
 Reading the message doesn’t make any sense so there must be something hidden in the picture.
-Let’s download it and try to analyse it using binwalk.
+Let’s download it and try to analyse it using binwalk(I could have used Foremost here too).
 ![binwalk result]({{ "/assets/images/necromancer-10.png"}})
 So we discover that the image is actually a zip archive and use binwalk to extract all the files.
 Upon unzipping the file we get a txt file named feathers.txt which again contains a base64 text. We it and get our 3rd flag along with a clue /amagicbridgeappearsatthechasm. Seems like a directory decode.
-![base64 unziped]({{ "/assets/images/necromancer-11.png"}})
+![base64 unziped]({{ "/assets/images/necromancer-12.png"}})
 <b> Third Flag Captured! </b> Let’s browse to the /amagicbridgeappearsatthechasm directory.
-![new directory acess]({{ "/assets/images/necromancer-10.png"}})
+![new directory acess]({{ "/assets/images/necromancer-13.png"}})
 Let’s download the image file again.
 
 
