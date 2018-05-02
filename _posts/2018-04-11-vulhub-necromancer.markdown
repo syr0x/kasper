@@ -17,7 +17,7 @@ VM is designed to DHCP auto assign so we typically track the VM's IP running net
 ![necromancer ascii]({{ "/assets/images/necromancer-01.png"}})
 First off, i perform a TCP SYN scan via nmap to identify open ports on the target machine. I usually perform a scan for ALL ports during CTF challenges to check for services that are not utilizing the TOP 1000 ports.
 ![necromancer ascii]({{ "/assets/images/necromancer-02.png"}})
-The scan gives us nothing. It seems that all TCP ports are closed or filtered. So, i try a UDP scan using nmap again.
+The scan gives us nothing. It seems that all TCP ports are closed or filtered. So, I try a UDP scan using nmap again.
 ![necromancer ascii]({{ "/assets/images/necromancer-03.png"}})
 Port 666 is open! Let' try a Netcat to see what is running in that port.
 ![necromancer ascii]({{ "/assets/images/necromancer-04.png"}})
@@ -45,7 +45,28 @@ Upon unzipping the file we get a txt file named feathers.txt which again contain
 ![base64 unziped]({{ "/assets/images/necromancer-12.png"}})
 <b> Third Flag Captured! </b> Let’s browse to the /amagicbridgeappearsatthechasm directory.
 ![new directory acess]({{ "/assets/images/necromancer-13.png"}})
-Let’s download the image file again.
+Opening the directory in our browser and running basic steganalysis tools like strings, unzip, exif, steghide, etc will lead us nowhere.
+It only tells us that we need a magical item that could protect us from the necromancer’s spell.
+
+
+So I decide google for “magic items wiki” to find some good stuff and make a custom dictionary with all the words on this wiki page. I will use cewl for this.
+![new directory acess]({{ "/assets/images/necromancer-14.png"}})
+Found a directory  /amagicbridgeappearsatthechasm/talisman!
+Next, let’s browse to /talisman directory.  Upon browsing to this site, we will be prompted with a file download dialog box. Let’s download the file.
+![new directory acess]({{ "/assets/images/necromancer-15.png"}})
+![new directory acess]({{ "/assets/images/necromancer-16.png"}})
+Chmod +x to make executable…
+when run it gives an interesting result.
+![new directory acess]({{ "/assets/images/necromancer-17.png"}})
+
+
+
+
+
+
+
+
+
 
 
 
