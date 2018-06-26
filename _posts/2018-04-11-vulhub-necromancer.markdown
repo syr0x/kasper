@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "VulnHub: Necromancer! by @Xerubus"
+title:  "VulnHub: Necromancer!"
 date:   2018-04-10 16:46:00
 categories: CTF VulnHub WriteUp
 ---
@@ -58,6 +58,9 @@ Next, let’s browse to /talisman directory.  Upon browsing to this site, we wil
 Chmod +x to make executable…
 when run it gives an interesting result.
 ![new directory acess]({{ "/assets/images/necromancer-17.png"}})
+No matter what we answer to the asked question –“Do you want to wear the talisman?”, the result is the same –“Nothing happens”.
+
+
 
 
 
