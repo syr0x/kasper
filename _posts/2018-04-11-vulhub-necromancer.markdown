@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "VulnHub: Necromancer! by @Xerubus"
+title:  "VulnHub: Necromancer!"
 date:   2018-04-10 16:46:00
 categories: CTF VulnHub WriteUp
 ---
