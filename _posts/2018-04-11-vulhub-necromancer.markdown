@@ -43,7 +43,7 @@ Let’s download it and try to analyse it using binwalk(I could have used Foremo
 So we discover that the image is actually a zip archive and use binwalk to extract all the files.
 Upon unzipping the file we get a txt file named feathers.txt which again contains a base64 text. We it and get our 3rd flag along with a clue /amagicbridgeappearsatthechasm. Seems like a directory decode.
 ![base64 unziped]({{ "/assets/images/necromancer-12.png"}})
-<b> Third Flag Captured! </b> Let’s browse to the /amagicbridgeappearsatthechasm directory.
+<b>Third Flag Captured! </b> Let’s browse to the /amagicbridgeappearsatthechasm directory.
 ![new directory acess]({{ "/assets/images/necromancer-13.png"}})
 Opening the directory in our browser and running basic steganalysis tools like strings, unzip, exif, steghide, etc will lead us nowhere.
 It only tells us that we need a magical item that could protect us from the necromancer’s spell.
@@ -59,9 +59,24 @@ Chmod +x to make executable…
 when run it gives an interesting result.
 ![new directory acess]({{ "/assets/images/necromancer-17.png"}})
 No matter what we answer to the asked question –“Do you want to wear the talisman?”, the result is the same –“Nothing happens”.
-
-
-
+Let’s test it for a possible buffer overflow…
+![new directory acess]({{ "/assets/images/necromancer-18.png"}})
+A segfault!!! It’s debug time! There are two ways I approached this… the long way, and the short way. I'll do the long way because i think is more fun :)
+Let’s breakout gdb and find out what registers we control and build an exploit.
+First up, We’ll create a pattern the size of 100 characters, which will give us our offset.
+![new directory acess]({{ "/assets/images/necromancer-21.png"}})
+![new directory acess]({{ "/assets/images/necromancer-22.png"}})
+Nice! We can see our offset is at 32. Let’s create a file with 32 A’s and 4 B’s in it, and pass this in our debugger to see if we can overwrite EIP.
+![new directory acess]({{ "/assets/images/necromancer-23.png"}})
+Look at that.. we have overwritten EIP with our 4 B’s. But now what? This binary is local to our attacking machine, so there’s no use throwing in any shellcode etc.
+Let’s take a look at the functions in our binary.
+![new directory acess]({{ "/assets/images/necromancer-20.png"}})
+Oh! A function we haven’t seen before! chantToBreakSpell. Let’s replace our B’s in EIP with the address of this function and see what happens…
+![new directory acess]({{ "/assets/images/necromancer-24.png"}})
+Once the buffer was overflown :p and the return address overwritten, the result was:
+![new directory acess]({{ "/assets/images/necromancer-25.png"}})
+</b>Fourth flag Captured</b> Again, i performed a google search on the MD5, revealing ‘blackmagic’.
+The previous flag mentions u31337, based on previous flags i immediately thought of UDP port 31337.
 
 
 
