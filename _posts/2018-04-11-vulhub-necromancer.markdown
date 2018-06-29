@@ -62,6 +62,8 @@ No matter what we answer to the asked question –“Do you want to wear the tal
 Let’s test it for a possible buffer overflow…
 ![new directory acess]({{ "/assets/images/necromancer-18.png"}})
 A segfault!!! It’s debug time! There are two ways I approached this… the long way, and the short way. I'll do the long way because i think is more fun :)
+
+
 Let’s breakout gdb and find out what registers we control and build an exploit.
 First up, We’ll create a pattern the size of 100 characters, which will give us our offset.
 ![new directory acess]({{ "/assets/images/necromancer-21.png"}})
@@ -75,7 +77,7 @@ Oh! A function we haven’t seen before! chantToBreakSpell. Let’s replace our 
 ![new directory acess]({{ "/assets/images/necromancer-24.png"}})
 Once the buffer was overflown :p and the return address overwritten, the result was:
 ![new directory acess]({{ "/assets/images/necromancer-25.png"}})
-</b>Fourth flag Captured</b> Again, i performed a google search on the MD5, revealing ‘blackmagic’.
+<b>Fourth flag Captured</b> Again, i performed a google search on the MD5, revealing ‘blackmagic’.
 The previous flag mentions u31337, based on previous flags i immediately thought of UDP port 31337.
 
 
